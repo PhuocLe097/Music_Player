@@ -1,1 +1,78 @@
-<!-- <iframe src="./src/index.html" width="100%" height="100%"></iframe> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link href="./src/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <section class="wrapper">
+      <div class="container">
+        <div class="player">
+          <div class="header">
+            <label>Now playing:</label>
+            <h3 class="title">Tên bài hát</h3>
+          </div>
+
+          <div class="CD-music">
+            <img class="CD" src="../assets/image/7.png" alt="CD lỗi" />
+            <span class="CD-span"></span>
+          </div>
+
+          <div class="controller">
+            <div class="btn-repeat">
+              <i class="fas fa-redo" style="color: white"></i>
+            </div>
+            <div class="btn-pre">
+              <i class="fas fa-step-backward" style="color: white"></i>
+            </div>
+            <div class="btn-play">
+              <!-- <i class="fas fa-pause icon-pause" style="color: white"></i> -->
+              <i id="btn-play" class="fas fa-play icon-play" style="color: white;"></i>
+            </div>
+            <div class="btn-next">
+              <i class="fas fa-step-forward" style="color: white"></i>
+            </div>
+            <div class="btn-random">
+              <i class="fas fa-random" style="color: white"></i>
+            </div>
+          </div>
+          <audio id="audio" src=""></audio>
+          <div class="play-time">
+            <input
+              type="range"
+              name=""
+              id="line"
+              class="line"
+              min="0"
+              max="100"
+              step="1"
+              value="0"
+            />
+            <div class="scroll">
+              <span class="music_player_time-start">00:00</span>
+              <span class="music_player_time-end">00:00</span>
+            </div>
+            <!-- <div class="pointer"></div> -->
+          </div>
+        </div>
+        <div class="playlist">
+          <ul class="list"></ul>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="./src/main.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+</html>
